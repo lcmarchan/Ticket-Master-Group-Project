@@ -7,7 +7,7 @@ import { SearchCriteriaComponent } from "./search-criteria/search-criteria.compo
 import { EventListComponent } from "./event-list/event-list.component";
 import { BucketlistPageComponent } from "./bucketlist-page/bucketlist-page.component";
 import { FormsModule } from "@angular/forms";
-import { RoutingService } from "./routing.service";
+// import { RoutingService } from "./routing.service";
 
 const appRoutes: Routes = [
   { path: "bucket-list", component: BucketlistPageComponent },
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     FormsModule
   ],
-  providers: [RoutingService],
+  // providers: [RoutingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
