@@ -10,8 +10,9 @@ export class EventService {
 
   // Http client deals with observable so you need to say what type you are returning.
   getData(keyword: string): Observable<any> {
+    console.log("This sorta works??");
     return this.http
-      .get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&source=universe&countryCode=US&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO
+      .get(`https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO
     `);
   }
 }
