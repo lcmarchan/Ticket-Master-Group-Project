@@ -11,7 +11,7 @@ import { FormsModule } from "@angular/forms";
 // import { RoutingService } from "./routing.service";
 
 const appRoutes: Routes = [
-  { path: "bucket-list", component: BucketlistPageComponent },
+  { path: "bucketlist-page", component: BucketlistPageComponent },
   { path: "event-list", component: EventListComponent },
   { path: "search-criteria", component: SearchCriteriaComponent },
   { path: "", redirectTo: "/event-list", pathMatch: "full" }
