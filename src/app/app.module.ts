@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { SearchCriteriaComponent } from "./search-criteria/search-criteria.component";
 import { EventListComponent } from "./event-list/event-list.component";
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   // providers: [RoutingService],
   bootstrap: [AppComponent]

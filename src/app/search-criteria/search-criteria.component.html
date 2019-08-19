@@ -1,1 +1,8 @@
-<p>search-criteria works!</p>
+<form #form="ngForm" (submit)="getData(form)">
+  <input type="text" name="keyword" id="search" ngModel />
+</form>
+
+<!-- For later -->
+<!-- <div *ngFor="let gif of giphyData">
+    <img src="{{ gif.images.original.url }}" />
+  </div> -->
