@@ -13,11 +13,11 @@ export class SearchCriteriaComponent implements OnInit {
 
   ngOnInit() {}
 
-  getData(form: any): void {
-    this.eventService.getData(form.value.keyword).subscribe(
+  getData(keyword: any): void {
+    this.eventService.getData(keyword).subscribe(
       response => {
         this.eventData = response.data;
-        console.log(this.eventData);
+        console.log(response);
       },
       error => console.log(error)
     );
