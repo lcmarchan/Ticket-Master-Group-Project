@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
 })
 export class EventService {
   eventList: any[] = [];
+  favoriteList: any[] = [];
 
   constructor(private http: HttpClient, private router: Router) {}
 
@@ -17,19 +18,17 @@ export class EventService {
     endDateTime: string,
     city: object
   ) {
-    console.log("This sorta works??");
     this.http
       .get(
         `https://app.ticketmaster.com/discovery/v2/events?apikey=jmMcmgjfpxGx8rV6Z6PsXR5tpOEjuJHt&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`
       )
       .subscribe(response => {
-        console.log(response);
         this.eventList = response["_embedded"].events;
-        console.log(this.eventList);
         this.router.navigate(["event-list"]);
       });
   }
+  addToFavorites(index: number) {
+    this.favoriteList.push(index);
+    console.log(this.favoriteList);
+  }
 }
-//https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&startDateTime=${startDateTime}&endDateTime=${endDateTime}&city=${city}&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO
-
-// https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`

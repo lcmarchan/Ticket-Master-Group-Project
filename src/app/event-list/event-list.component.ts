@@ -22,9 +22,11 @@ export class EventListComponent implements OnInit {
   }
 
   toggleDetails(index: number): void {
-    console.log(index);
     this.eventData[index].showDetails = !this.eventData[index].showDetails;
-    console.log("this was clicked");
+  }
+
+  addToFavorites(index: number) {
+    this.eventService.addToFavorites(index);
   }
 }
 
