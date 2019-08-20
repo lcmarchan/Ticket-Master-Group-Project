@@ -11,8 +11,8 @@ export class SearchCriteriaComponent implements OnInit {
 
   constructor(private eventService: EventService) {}
 
-  getData(keyword: any): void {
-    this.eventService.getData(keyword);
+  getData(keyword: any, startDateTime: any, endDateTime: any, city: any): void {
+    this.eventService.getData(keyword, startDateTime, endDateTime, city);
   }
 
   ngOnInit() {}
