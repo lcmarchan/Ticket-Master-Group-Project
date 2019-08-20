@@ -11,12 +11,16 @@ export class EventService {
   constructor(private http: HttpClient, private router: Router) {}
 
   // Http client deals with observable so you need to say what type you are returning.
-  getData(keyword: string) {
+  getData(
+    keyword: string,
+    startDateTime: string,
+    endDateTime: string,
+    city: string
+  ) {
     console.log("This sorta works??");
     this.http
-      .get(
-        `https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO
-    `
+      .get( `https://app.ticketmaster.com/discovery/v2/events?apikey=jmMcmgjfpxGx8rV6Z6PsXR5tpOEjuJHt&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`
+    
       )
       .subscribe(response => {
         console.log(response);
@@ -26,3 +30,6 @@ export class EventService {
       });
   }
 }
+//https://app.ticketmaster.com/discovery/v2/events.json?keyword=${keyword}&startDateTime=${startDateTime}&endDateTime=${endDateTime}&city=${city}&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO
+
+// https://app.ticketmaster.com/discovery/v2/events.json?countryCode=US&apikey=qeFcLJvWSqBRCQ0nFcMSyQWsI8rOcEGO&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`

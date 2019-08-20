@@ -1,18 +1,13 @@
-<form #form="ngForm" (submit)="getData(form.value.keyword)">
+<form #form="ngForm" (submit)="getData(form.value.keyword, form.value.startDateTime, form.value.endDateTime, form.value.city)">
   <label for="keyword">Artist/Band Name</label>
   <input type="text" name="keyword" id="search" required ngModel />
+  <label for="date">Date Range</label>
+  <input type="date" name="startDateTime" id="date" required ngModel />
+  <input type="date" name="endDateTime" id="dateTwo" required ngModel />
+  <label for="city">City</label>
+  <input type="text" name="city" id="city" ngModel />
   <button>Search</button>
 </form>
-
-<div>
-  <p>Event Name:</p>
-</div>
-
-<!-- <label for="date">Date Range</label>
-<input type="date" name="date" id="date" required ngModel />
-<input type="date" name="dateTwo" id="dateTwo" required ngModel />
-<label for="location">Concert Location</label>
-<input type="text" name="location" id="location" required ngModel /> -->
 
 <!-- For later -->
 
