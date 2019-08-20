@@ -3,6 +3,5 @@
   <p>Event Name: {{ event.name }}</p>
   <p>Event Date: {{ event.dates.start.localDate }}</p>
   <p>Event City: {{ event._embedded.venues[0].city.name }}</p>
+  <a href="{{ event.url }}">Go to event page</a>
 </div>
-
-<p>this worked!</p>
