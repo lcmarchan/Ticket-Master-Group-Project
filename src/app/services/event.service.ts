@@ -10,7 +10,6 @@ export class EventService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
- 
   // Http client deals with observable so you need to say what type you are returning.
   getData(
     keyword: string,
