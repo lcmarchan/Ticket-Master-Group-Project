@@ -14,4 +14,16 @@ export class BucketlistPageComponent implements OnInit {
   ngOnInit() {
     this.favoriteList = this.eventService.favoriteList;
   }
+
+  toggleDetails(index: number): void {
+    this.favoriteList[index].showDetails = !this.favoriteList[index]
+      .showDetails;
+  }
+
+  removeFavorite(favoriteIndex): void {
+    this.favoriteList.splice(favoriteIndex, 1);
+  }
+  // removeBook(index: number): void {
+  //   this.onRemove.emit(index);
+  // }
 }
