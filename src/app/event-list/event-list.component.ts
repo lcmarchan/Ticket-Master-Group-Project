@@ -9,10 +9,17 @@ import { EventService } from "../services/event.service";
 export class EventListComponent implements OnInit {
   eventData: any[];
 
+  showDetails: boolean = false;
+
   constructor(private eventService: EventService) {}
 
   ngOnInit() {
     this.eventData = this.eventService.eventList;
+  }
+
+  toggleDetails(): void {
+    this.showDetails = !this.showDetails;
+    console.log("this was clicked")
   }
 }
 

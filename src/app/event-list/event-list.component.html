@@ -3,7 +3,12 @@
   <p>Event Name: {{ event.name }}</p>
   <p>Event Date: {{ event.dates.start.localDate }}</p>
   <p>Event City: {{ event._embedded.venues[0].city.name }}</p>
-  <p>Event Venue: {{ event._embedded.venues[0].name }}</p>
-  <p>Genre: {{ event.classifications[0].genre.name }}</p>
-  <a href="{{ event.url }}">Go to event page</a>
+  <div *ngIf="showDetails">
+    <p>Event Venue: {{ event._embedded.venues[0].name }}</p>
+    <p>Genre: {{ event.classifications[0].genre.name }}</p>
+    <a href="{{ event.url }}">Go to event page</a>
+  </div>
+  <button *ngIf="!showDetails" (click)="toggleDetails()">
+    See More Details
+  </button>
 </div>

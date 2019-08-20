@@ -14,7 +14,7 @@ const appRoutes: Routes = [
   { path: "bucketlist-page", component: BucketlistPageComponent },
   { path: "event-list", component: EventListComponent },
   { path: "search-criteria", component: SearchCriteriaComponent },
-  { path: "", redirectTo: "/event-list", pathMatch: "full" }
+  { path: "", redirectTo: "/search-criteria", pathMatch: "full" }
 ];
 
 @NgModule({
