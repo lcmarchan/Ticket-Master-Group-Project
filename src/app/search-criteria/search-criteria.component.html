@@ -1,6 +1,13 @@
 <form #form="ngForm" (submit)="getData(form.value.keyword)">
+  <label for="keyword">Artist/Band Name</label>
   <input type="text" name="keyword" id="search" ngModel />
+  <button>Search</button>
 </form>
+<label for="date">Date Range</label>
+<input type="date" name="date" id="date" ngModel />
+<input type="date" name="dateTwo" id="dateTwo" ngModel />
+<label for="location">Concert Location</label>
+<input type="text" name="location" id="location" ngModel />
 
 <!-- For later -->
 <!-- <div *ngFor="let gif of giphyData">
