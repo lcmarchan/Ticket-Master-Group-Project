@@ -7,19 +7,19 @@ import { EventService } from "src/app/services/event.service";
   styleUrls: ["./search-criteria.component.css"]
 })
 export class SearchCriteriaComponent implements OnInit {
-  eventData: any;
+  eventList: any[];
 
   constructor(private eventService: EventService) {}
 
-  ngOnInit() {}
-
   getData(keyword: any): void {
-    this.eventService.getData(keyword).subscribe(
-      response => {
-        this.eventData = response.data;
-        console.log(response);
-      },
-      error => console.log(error)
-    );
+    this.eventService.getData(keyword);
   }
+
+  ngOnInit() {}
 }
+
+// .subscribe(
+//   response => {
+//     this.eventData = response.data;
+//     error => console.log(error)
+//     );
