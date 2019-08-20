@@ -15,12 +15,12 @@ export class EventService {
     keyword: string,
     startDateTime: string,
     endDateTime: string,
-    city: string
+    city: object
   ) {
     console.log("This sorta works??");
     this.http
-      .get( `https://app.ticketmaster.com/discovery/v2/events?apikey=jmMcmgjfpxGx8rV6Z6PsXR5tpOEjuJHt&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`
-    
+      .get(
+        `https://app.ticketmaster.com/discovery/v2/events?apikey=jmMcmgjfpxGx8rV6Z6PsXR5tpOEjuJHt&keyword=${keyword}&locale=*&startDateTime=${startDateTime}T00:00:00Z&endDateTime=${endDateTime}T23:59:59Z&city=${city}`
       )
       .subscribe(response => {
         console.log(response);

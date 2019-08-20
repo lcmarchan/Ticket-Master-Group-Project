@@ -1,5 +1,8 @@
 <div *ngFor="let event of eventData">
+  <img src="{{ event.images[0].url }}" />
   <p>Event Name: {{ event.name }}</p>
+  <p>Event Date: {{ event.dates.start.localDate }}</p>
+  <p>Event City: {{ event._embedded.venues[0].city.name }}</p>
 </div>
 
 <p>this worked!</p>
