@@ -4,11 +4,12 @@
   <p>Event Date: {{ favorite.dates.start.localDate }}</p>
   <p>Event City: {{ favorite._embedded.venues[0].city.name }}</p>
   <a href="{{ favorite.url }}">Go to event page</a>
-  <!-- <div *ngIf="event.showDetails">
-    <p>Event Venue: {{ event._embedded.venues[0].name }}</p>
-    <p>Genre: {{ event.classifications[0].genre.name }}</p>
-  </div> -->
-  <!-- <button *ngIf="!showDetails" (click)="toggleDetails(i)">
+  <div *ngIf="favorite.showDetails">
+    <p>Event Venue: {{ favorite._embedded.venues[0].name }}</p>
+    <p>Genre: {{ favorite.classifications[0].genre.name }}</p>
+  </div>
+  <button *ngIf="!showDetails" (click)="toggleDetails(i)">
     See More Details
-  </button> -->
+  </button>
+  <button (click)="removeFavorite(i)">X</button>
 </div>
