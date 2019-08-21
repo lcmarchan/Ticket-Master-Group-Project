@@ -9,12 +9,15 @@
     )
   "
 >
-  <label for="keyword">Artist/Band Name</label>
+  <label for="keyword">Search for an event</label>
   <input type="text" name="keyword" id="search" required ngModel />
-  <label for="date">Date Range</label>
-  <input type="date" name="startDateTime" id="date" required ngModel />
-  <input type="date" name="endDateTime" id="dateTwo" required ngModel />
-  <label for="city">City</label>
-  <input type="text" name="city" id="city" ngModel />
-  <button>Search</button>
+  <div class="dateCityInputs">
+    <label for="dateStart">Start Date</label>
+    <input type="date" name="startDateTime" id="dateStart" required ngModel />
+    <label for="dateTwo">End Date</label>
+    <input type="date" name="endDateTime" id="dateTwo" required ngModel />
+    <label for="city">City</label>
+    <input type="text" name="city" id="city" ngModel />
+  </div>
+  <button class="buttonStyle">Search</button>
 </form>
