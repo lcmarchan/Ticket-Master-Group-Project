@@ -1,1 +1,36 @@
 /* <i class="fas fa-star"></i> */
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.events {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center; */
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 20px;
+  height: 370px;
+  width: 300px;
+}
+
+img {
+  width: 300px;
+  height: 200px;
+}
+
+.eventInfo {
+  display: flex;
+  border-top: 2px solid black;
+  flex-direction: column;
+}
+
+p {
+  margin: 0px;
+}

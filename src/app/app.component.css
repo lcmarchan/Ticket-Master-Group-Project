@@ -1,7 +1,10 @@
 .mainNav {
   display: flex;
+  background-color: #4f5d75;
 }
 
 a {
   display: flex;
+  color: white;
+  text-decoration: none;
 }
