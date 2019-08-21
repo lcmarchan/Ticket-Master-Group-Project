@@ -1,7 +1,13 @@
 /* <i class="fas fa-star"></i> */
-* {
-  font-family: 'Raleway', sans-serif;
+:host {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  background-image: url("/assets/img/concertimage.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow-y: scroll;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -10,17 +16,13 @@ main {
 }
 
 .mainContent {
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
   border: 2px solid black;
   padding: 10px;
   border-radius: 10px;
   margin: 20px;
-  height: 370px;
+  height: 420px;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.712);
 }
 
 img {
@@ -36,4 +38,16 @@ img {
 
 p {
   margin: 0px;
+}
+
+button {
+  font-family: "Lobster Two", cursive;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+}
+button:hover {
+  background-color: #883677;
+  color: white;
 }

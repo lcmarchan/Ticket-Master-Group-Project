@@ -9,15 +9,23 @@
     )
   "
 >
-  <label for="keyword">Search for an event</label>
-  <input type="text" name="keyword" id="search" required ngModel />
+  <!-- <label for="keyword">Search for an event</label> -->
+  <h1>Search</h1>
+  <input
+    type="text"
+    name="keyword"
+    id="search"
+    placeholder="e.g. band name, event type, sporting event"
+    required
+    ngModel
+  />
   <div class="dateCityInputs">
     <label for="dateStart">Start Date</label>
     <input type="date" name="startDateTime" id="dateStart" required ngModel />
     <label for="dateTwo">End Date</label>
     <input type="date" name="endDateTime" id="dateTwo" required ngModel />
     <label for="city">City</label>
-    <input type="text" name="city" id="city" ngModel />
+    <input type="text" name="city" id="city" placeholder="enter city" ngModel />
   </div>
   <button class="buttonStyle">Search</button>
 </form>

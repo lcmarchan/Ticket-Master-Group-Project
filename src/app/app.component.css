@@ -1,17 +1,18 @@
 .mainNav {
   display: flex;
-  background-color: #4f5d75;
+  background-color: #883677;
   font-family: "Lobster Two", cursive;
   justify-content: space-between;
 }
 
 a {
   display: flex;
-  color: #d4d2d5;
+  color: #ffeef2;
   text-decoration: none;
   font-family: "Lobster Two", cursive;
   padding: 5px;
-  font-size: 20px;
+  font-size: 30px;
+  padding-left: 30px;
 }
 a:hover {
   text-decoration-line: underline;
@@ -29,8 +30,14 @@ nav {
   justify-content: space-between;
 }
 
+.nav {
+  margin-right: 20px;
+}
+
 h1 {
   color: #ffeef2;
-  padding: 5px;
-  font-size: 30px;
+  padding: 10px;
+  font-size: 35px;
+  text-shadow: 2px 2px black;
+  margin-left: 20px;
 }
