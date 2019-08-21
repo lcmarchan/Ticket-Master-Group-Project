@@ -20,7 +20,7 @@ main {
   padding: 10px;
   border-radius: 10px;
   margin: 20px;
-  height: 370px;
+  height: 420px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.712);
 }
@@ -42,4 +42,13 @@ p {
 
 button {
   font-family: "Lobster Two", cursive;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #883677;
+  color: white;
 }

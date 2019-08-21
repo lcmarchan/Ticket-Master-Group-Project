@@ -17,16 +17,26 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  height: 80vh;
+  height: 70vh;
   justify-content: center;
 }
 label {
   padding: 5px;
+  color: #2f6690;
+  font-size: 20px;
+  font-weight: 700;
 }
 input {
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 15px;
+  margin: 15px 0px;
   width: 80%;
+  height: 25px;
+}
+
+h1 {
+  color: #2f6690;
+  font-size: 50px;
+  font-family: "Lobster Two", cursive;
 }
 
 .buttonStyle {
@@ -37,6 +47,8 @@ input {
   font-size: 18px;
   width: 40%;
   font-family: "Lobster Two", cursive;
+  margin: 10px;
+  height: 40px;
 }
 
 button:hover {
@@ -44,10 +56,25 @@ button:hover {
 }
 
 .dateCityInputs {
-  width: 80%;
+  width: 82.5%;
 }
 
 input {
   border-radius: 5px;
   border: 1px solid #d4d2d5;
+}
+
+input[type="text"] {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+}
+
+::placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+::-webkit-datetime-edit {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
 }
