@@ -1,4 +1,8 @@
 /* <i class="fas fa-star"></i> */
+* {
+  font-family: "Raleway", sans-serif;
+}
+
 main {
   display: flex;
   justify-content: center;
@@ -34,3 +38,5 @@ img {
 p {
   margin: 0px;
 }
+
+

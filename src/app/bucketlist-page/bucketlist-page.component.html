@@ -1,15 +1,20 @@
-<div *ngFor="let favorite of favoriteList; index as i">
-  <img src="{{ favorite.images[0].url }}" />
-  <p>Event Name: {{ favorite.name }}</p>
-  <p>Event Date: {{ favorite.dates.start.localDate }}</p>
-  <p>Event City: {{ favorite._embedded.venues[0].city.name }}</p>
-  <a href="{{ favorite.url }}">Go to event page</a>
-  <div *ngIf="favorite.showDetails">
-    <p>Event Venue: {{ favorite._embedded.venues[0].name }}</p>
-    <p>Genre: {{ favorite.classifications[0].genre.name }}</p>
+<main>
+  <div class="mainContent" *ngFor="let favorite of favoriteList; index as i">
+    <img src="{{ favorite.images[0].url }}" />
+    <div class="bucketInfo">
+      <p>Event Name: {{ favorite.name }}</p>
+      <p>Event Date: {{ favorite.dates.start.localDate }}</p>
+      <p>Event City: {{ favorite._embedded.venues[0].city.name }}</p>
+
+      <div *ngIf="favorite.showDetails">
+        <p>Event Venue: {{ favorite._embedded.venues[0].name }}</p>
+        <p>Genre: {{ favorite.classifications[0].genre.name }}</p>
+      </div>
+      <button *ngIf="!showDetails" (click)="toggleDetails(i)">
+        See More Details
+      </button>
+      <button (click)="removeFavorite(i)">X</button>
+      <a href="{{ favorite.url }}">Go to event page</a>
+    </div>
   </div>
-  <button *ngIf="!showDetails" (click)="toggleDetails(i)">
-    See More Details
-  </button>
-  <button (click)="removeFavorite(i)">X</button>
-</div>
+</main>

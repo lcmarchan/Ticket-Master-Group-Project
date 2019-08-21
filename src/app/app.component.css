@@ -1,10 +1,36 @@
 .mainNav {
   display: flex;
   background-color: #4f5d75;
+  font-family: "Lobster Two", cursive;
+  justify-content: space-between;
 }
 
 a {
   display: flex;
-  color: white;
+  color: #d4d2d5;
   text-decoration: none;
+  font-family: "Lobster Two", cursive;
+  padding: 5px;
+  font-size: 20px;
+}
+a:hover {
+  text-decoration-line: underline;
+}
+
+div {
+  display: flex;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #ffeef2;
+  padding: 5px;
+  font-size: 30px;
 }
