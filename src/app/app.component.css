@@ -1,13 +1,13 @@
 .mainNav {
   display: flex;
-  background-color: #4f5d75;
+  background-color: #883677;
   font-family: "Lobster Two", cursive;
   justify-content: space-between;
 }
 
 a {
   display: flex;
-  color: #d4d2d5;
+  color: #ffeef2;
   text-decoration: none;
   font-family: "Lobster Two", cursive;
   padding: 5px;

@@ -17,6 +17,8 @@ form {
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  height: 80vh;
+  justify-content: center;
 }
 label {
   padding: 5px;
@@ -28,16 +30,17 @@ input {
 }
 
 .buttonStyle {
-  background-color: #4f5d75;
-  color: #d4d2d5;
+  background-color: #883677;
+  color: white;
   border-radius: 8px;
   height: 5vh;
-  font-size: 15px;
+  font-size: 18px;
   width: 40%;
+  font-family: "Lobster Two", cursive;
 }
 
 button:hover {
-  color: yellow;
+  text-decoration-line: underline;
 }
 
 .dateCityInputs {

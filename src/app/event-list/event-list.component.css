@@ -1,6 +1,11 @@
 /* <i class="fas fa-star"></i> */
-* {
+:host {
+  display: block;
   font-family: "Raleway", sans-serif;
+  background-image: url("/assets/img/concertimage.jpg");
+  background-size: cover;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 main {
@@ -11,17 +16,13 @@ main {
 }
 
 .events {
-  /* display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center; */
   border: 2px solid black;
   padding: 10px;
   border-radius: 10px;
   margin: 20px;
   height: 370px;
   width: 300px;
+  background-color: rgba(255, 255, 255, 0.712);
 }
 
 img {
@@ -39,4 +40,6 @@ p {
   margin: 0px;
 }
 
-
+button {
+  font-family: "Lobster Two", cursive;
+}
